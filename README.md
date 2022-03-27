@@ -6,9 +6,8 @@
 - [Usage](#usage)
 - [License](#license)
 - [Contributions](#contributions)
-- [Testing](#testing)
+- [Future Testing](#future-testing)
 - [Questions](#questions)
-- [Screenshot] (#screenshot)
 - [Link](#link)
 
 ### DESCRIPTION:
@@ -35,8 +34,9 @@ I would like to be able to get the 5-day forecast working...
 If you have any questions on this application please feel free to contact me on
 [Github](https://github.com/oddtk/) or through email at: contact.oddtk@gmail.com
 
-### Screenshot
+### PREVIEW:
+
 ![wd](https://user-images.githubusercontent.com/90938940/160303695-16de96dd-bcc3-4e26-b0a3-75128ad3aa9f.png)
 
-### Link
+### LINK:
 https://oddtk.github.io/Weather_App/
