@@ -23,38 +23,41 @@ function forecast(city) {
 });
 };
 
-function futureForecast(lat, lon) {
-    const urlFuture = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=current,minutely,hourly,alerts&appid=${apiKey}`;
+    // could not get five day forcast working
 
-    $.ajax({
-        url: urlFuture,
-        method: 'GET',
-    }).then(function (response) {
-        $('#weatherCards').empty();
-        for (let i = 1; i < 6; i++) {
-            const forecast = {
-                date: response.daily[i].dt,
-                temp: response.daily[i].temp.day,
-                humidity: response.daily[i].humidity,
-            };
+// function futureForecast(lat, lon) {
+//     const urlFuture = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=current,minutely,hourly,alerts&appid=${apiKey}`;
 
-            const currentDate = moment.unix(forecast.date).format('MM/DD/YYYY');
+//     $.ajax({
+//         url: urlFuture,
+//         method: 'GET',
+//     }).then(function (response) {
+//         $('#weatherCards').empty();
+//         for (let i = 1; i < 6; i++) {
+//             const forecast = {
+//                 date: response.daily[i].dt,
+//                 temp: response.daily[i].temp.day,
+//                 humidity: response.daily[i].humidity,
+//             };
 
-            const weatherCards = $(`
-                <div class="border border-3 border-secondary rounded col-12">
-                <div class="card pl-3 pt-3 mb-3 bg-primary text-light"
-                        <div class="card-body">
-                            <h5>${currentDate}</h5>
-                            <p>Temp: ${forecast.temp}F</p>
-                            <p>Humidity: ${forecast.humidity}</p>
-                        </div>
-                    </div>
-            `);
-            $('#weatherCards').append(weatherCards);
-            console.log(weatherCards);
-        }
-    })
-};
+//             const currentDate = moment.unix(forecast.date).format('MM/DD/YYYY');
+
+//             const weatherCards = $(`
+//                 <div class="border border-3 border-secondary rounded col-12">
+//                 <div class="card pl-3 pt-3 mb-3 bg-primary text-light"
+//                         <div class="card-body">
+//                             <h5>${currentDate}</h5>
+//                             <p>Temp: ${forecast.temp}F</p>
+//                             <p>Humidity: ${forecast.humidity}</p>
+//                         </div>
+//                     </div>
+//             `);
+//             $('#weatherCards').append(weatherCards);
+//             console.log(weatherCards);
+//         }
+//     })
+// };
+// }
 
 $('#searchButton').on('click', function (event) {
     event.preventDefault();
