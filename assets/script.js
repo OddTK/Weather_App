@@ -16,7 +16,7 @@ function forecast(city) {
             ${response.name} - ${today}
             </h2>
             <p>Temperature: ${response.main.temp} F</p>
-            <p>Wind: ${response.main.wind_speed} MPH</p>
+            <p>Wind: ${response.wind.speed} MPH</p>
             <p>Humidity: ${response.main.humidity}</p>
         `);
     $('#citySearched').append(citySearched);
